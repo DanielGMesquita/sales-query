@@ -26,7 +26,7 @@ public interface SaleRepository extends JpaRepository<Sale, Long> {
 
   @Query(
       value =
-          "SELECT dev.danielmesquita.salesquery.dtos.SaleSummaryDTO(s.amount, sel.name) "
+          "SELECT new dev.danielmesquita.salesquery.dtos.SaleSummaryDTO(s.amount, sel.name) "
               + "FROM Sale s JOIN s.seller sel "
               + "WHERE s.date BETWEEN :minDate AND :maxDate ",
       countQuery =
