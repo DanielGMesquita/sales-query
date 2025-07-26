@@ -52,6 +52,53 @@ Example:
 curl "http://localhost:8080/sales/report?minDate=2023-01-01&maxDate=2023-12-31&name=John"
 ```
 
+## Testing
+
+Run the tests using Maven:
+
+```bash
+mvn test
+```
+
+## Project Structure
+
+```
+sales-query-system/
+├── src/
+│   ├── main/
+│   │   ├── java/
+│   │   │   └── dev/
+│   │   │       └── danielmesquita/salesquery
+│   │   │           ├── SalesQueryApplication.java
+│   │   │           ├── controllers/
+│   │   │           │   └── SaleController.java
+│   │   │           ├── dto/
+│   │   │           │   ├── SaleMinDTO.java
+│   │   │           │   └── SaleSummaryDTO.java
+│   │   │           ├── entities/
+│   │   │           │   └── Sale.java
+│   │   │           ├── repositories/
+│   │   │           │   └── SaleRepository.java
+│   │   │           └── services/
+│   │   │               └── SaleService.java
+│   │   └── resources/
+│   │       ├── application.properties
+│   │       └── import.sql
+│   └── test/
+│       └── java/
+│           └── dev/
+│               └── danielmesquita/salesquery
+│                   ├── SalesQueryApplicationTests.java
+│                   ├── controller/
+│                   │   └── SaleControllerTest.java
+│                   ├── repository/
+│                   │   └── SaleRepositoryTest.java
+│                   └── service/
+│                       └── SaleServiceTest.java
+├── pom.xml
+└── README.md
+```
+
 ## Technologies
 
 - Java 17
