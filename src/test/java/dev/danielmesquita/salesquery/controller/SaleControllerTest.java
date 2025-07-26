@@ -1,4 +1,4 @@
-package dev.danielmesquita.salesquery;
+package dev.danielmesquita.salesquery.controller;
 
 import static org.hamcrest.Matchers.*;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
